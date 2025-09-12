@@ -1,0 +1,16 @@
+{
+    "name": null,
+    "input_variables": [
+        "context",
+        "question"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "You are a helpful assisstant. Answer the following question ONLY from the provided context. If the context is insufficient,just say I don't know.\n question:{question}\ncontext:{context}",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}
