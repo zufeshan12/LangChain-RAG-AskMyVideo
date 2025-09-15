@@ -68,29 +68,44 @@ It allows users to enter a YouTube video URL, extracts its audio, transcribes it
 - [Streamlit]
 ---
 
-## 🖥️ Installation & Setup
+## Project Structure
+- `app.py` — Main application entry point
+- `document_handler.py` — Transcript generation, saving/loading, chunking, formatting
+- `process_transcript.py` — RAG pipeline orchestration
+- `extract_audio.py` — Audio extraction utilities
+- `prompt_template.py` & `PromptTemplate.json` — Prompt templates for LLM
+- `requirements.txt` — Python dependencies
+- `Downloads/Youtube/` — Downloaded audio files
+- `transcript_abcd.txt` — Latest transcript with last 4 chars from provided url
+---
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/your-username/LangChain-RAG-AskMyVideo.git
-cd LangChain-RAG-AskMyVideo
+## Quickstart
+1. Clone the repo and install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   
+2. Set environment variables
+   ```sh
+   OPENAI_API_KEY=your_openai_api_key
+   
+3. Run the main app:
+   ```sh
+   streamlit run app.py
+   
+---
+## Demo
 
-2. **Create a virtual environment**
-```bash
-python -m venv venv
-source venv/bin/activate   # macOS/Linux
-venv\Scripts\activate      # Windows
+### Screenshots
+<img width="782" height="654" alt="askMyVideo_look" src="https://github.com/user-attachments/assets/c27c3b87-e194-47dd-9c68-97d05dc5627c" />
 
-3. **Install dependencies**
-```bash
-pip install -r requirements.txt
+<img width="964" height="735" alt="rag-response" src="https://github.com/user-attachments/assets/a237fbfc-3aab-4b7e-a25f-385628c08f4e" />
 
-4. **Set environment variables**
-```bash
-OPENAI_API_KEY=your_openai_api_key
+### Video
 
-5. **Run the app**
-```bash
-streamlit run app.py
+https://user-images.githubusercontent.com/yourusername/yourrepo/demo.mp4
 
+---
+
+## License
+MIT
 
