@@ -100,9 +100,10 @@ It allows users to enter a YouTube video URL, extracts its audio, transcribes it
 
 <img width="964" height="735" alt="rag-response" src="https://github.com/user-attachments/assets/a237fbfc-3aab-4b7e-a25f-385628c08f4e" />
 
-### Video
+---
+## 🎬 Video Demo
+👉 [Watch the demo on YouTube](https://youtu.be/your-video-id)
 
-https://user-images.githubusercontent.com/yourusername/yourrepo/demo.mp4
 
 ---
 
