@@ -1,7 +1,6 @@
 # AskMyVideo 🎥🔎
 
-AskMyVideo is an interactive Q&A application built with the **LangChain framework**.  
-It allows users to enter a YouTube video URL, extracts its audio, transcribes it into text, and enables intelligent question-answering over the transcript using advanced retrieval and LLM-based reasoning.The project also leverages LangSmith to observe, trace, and debug the app with custom metadata and tags for better monitoring and evaluation.
+AskMyVideo is an interactive Q&A application built with the **LangChain framework**. It allows users to enter a YouTube video URL, extracts its audio, transcribes it into text, and enables intelligent question-answering over the transcript using advanced retrieval and LLM-based reasoning. The project also leverages LangSmith to observe, trace, and debug the app with custom metadata and tags for better monitoring and evaluation.
 
 ---
 
@@ -60,12 +59,13 @@ It allows users to enter a YouTube video URL, extracts its audio, transcribes it
 ---
 
 ## ⚙️ Tech Stack
-- [LangChain](https://www.langchain.com/)  
+- [LangChain](https://www.langchain.com/)
+- [LangSmith](https://docs.langchain.com/langsmith/home)
 - [OpenAI Whisper](https://github.com/openai/whisper)  
 - [OpenAI GPT-3.5](https://platform.openai.com/docs/models/gpt-3-5)  
 - [FAISS](https://faiss.ai/) for vector storage and retrieval  
 - [YoutubeAudioLoader](https://api.python.langchain.com/en/latest/document_loaders/langchain_community.document_loaders.youtube.YoutubeAudioLoader.html)  
-- [Streamlit]
+- [Streamlit](https://docs.streamlit.io/)
 ---
 
 ## Project Structure
@@ -96,9 +96,12 @@ It allows users to enter a YouTube video URL, extracts its audio, transcribes it
 ## Demo
 
 ### Screenshots
-<img width="964" height="735" alt="askMyVideo_look" src="https://github.com/user-attachments/assets/c27c3b87-e194-47dd-9c68-97d05dc5627c" />
+App Look <img width="964" height="735" alt="askMyVideo_look" src="https://github.com/user-attachments/assets/c27c3b87-e194-47dd-9c68-97d05dc5627c" />
 
-<img width="964" height="735" alt="rag-response" src="https://github.com/user-attachments/assets/a237fbfc-3aab-4b7e-a25f-385628c08f4e" />
+Response <img width="964" height="735" alt="rag-response" src="https://github.com/user-attachments/assets/a237fbfc-3aab-4b7e-a25f-385628c08f4e" />
+
+Debug traces <img width="964" height="735" alt="langsmith_askmyvideo" src="https://github.com/user-attachments/assets/4037290d-1a73-4437-bce1-b71fad294fcb" />
+
 
 ---
 ## 🎬 Video Demo
