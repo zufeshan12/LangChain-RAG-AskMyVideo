@@ -1,7 +1,7 @@
 # AskMyVideo 🎥🔎
 
 AskMyVideo is an interactive Q&A application built with the **LangChain framework**.  
-It allows users to enter a YouTube video URL, extracts its audio, transcribes it into text, and enables intelligent question-answering over the transcript using advanced retrieval and LLM-based reasoning.
+It allows users to enter a YouTube video URL, extracts its audio, transcribes it into text, and enables intelligent question-answering over the transcript using advanced retrieval and LLM-based reasoning.The project also leverages LangSmith to observe, trace, and debug the app with custom metadata and tags for better monitoring and evaluation.
 
 ---
 
@@ -54,8 +54,8 @@ It allows users to enter a YouTube video URL, extracts its audio, transcribes it
 - Combines transcript-based evidence with natural language generation to deliver high-quality responses.
 
 
-###  Sleak UI with Streamlit
-- Interactive UI with custom buttons and progress bar to walk you through each step behind the process.
+###  Observability with LangSmith
+- This not only highlights the app’s reliability and transparency but also demonstrates production-readiness through structured monitoring and fine-grained performance insights.
 
 ---
 
@@ -96,7 +96,7 @@ It allows users to enter a YouTube video URL, extracts its audio, transcribes it
 ## Demo
 
 ### Screenshots
-<img width="782" height="654" alt="askMyVideo_look" src="https://github.com/user-attachments/assets/c27c3b87-e194-47dd-9c68-97d05dc5627c" />
+<img width="964" height="735" alt="askMyVideo_look" src="https://github.com/user-attachments/assets/c27c3b87-e194-47dd-9c68-97d05dc5627c" />
 
 <img width="964" height="735" alt="rag-response" src="https://github.com/user-attachments/assets/a237fbfc-3aab-4b7e-a25f-385628c08f4e" />
 
