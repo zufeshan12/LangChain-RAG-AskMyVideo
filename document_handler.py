@@ -3,19 +3,25 @@ from langchain_community.document_loaders.parsers.audio import OpenAIWhisperPars
 from langchain_community.document_loaders import YoutubeAudioLoader
 from langchain_community.document_loaders.generic import GenericLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langsmith import traceable
 
 class DocumentHandler:
     # save page-content from returned Document object into a text file
+    @traceable(name="save_transcript")
     def save_transcript(documents:str,file_path:str):
         with open(file_path,'w',encoding='UTF-8') as txt_file:
             txt_file.write(documents + '\n')
+            
     # load saved transcript from local to bypass speech-to-text conversion process
+    @traceable(name="load_transcript")
     def load_transcript(file_path:str):
     # load txt file and reconstruct Document object from it
         with open(file_path,'r',encoding='utf-8') as f:
             text = f.read()
         return text
+    
     # generate transcript from youtube video url
+    @traceable(name="generate_transcript",metadata={'parser':'OpenAIWhisperParser'})
     def generate_transcript(url:str,file_path:str):
         #["https://www.youtube.com/watch?v=hmtuvNfytjM&t=25s"]
         # directory to save audio files
@@ -31,12 +37,14 @@ class DocumentHandler:
         transcript = "".join([doc.page_content for doc in docs])
         DocumentHandler.save_transcript(transcript,file_path)
         return transcript
-
+    
+    @traceable(name="create_documents",metadata={'text_splitter':'RecursiveCharacterTextSplitter'})
     def create_documents(transcript:str):
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=500,chunk_overlap = 100)
         docs = text_splitter.create_documents([transcript]) #from_text
         return docs
-
+    
+    @traceable(name="format_docs")
     def format_docs(docs:list[Document]):
         return "\n\n".join([doc.page_content for doc in docs])
 

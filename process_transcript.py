@@ -9,15 +9,19 @@ from langchain.retrievers.multi_query import MultiQueryRetriever
 from langchain_core.documents.base import Blob
 from langchain_core.documents import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langsmith import traceable
 from youtube_transcript_api import YouTubeTranscriptApi
 from document_handler import DocumentHandler
 import streamlit as st
 from pathlib import Path
 import time
+import os
 
+os.environ['LANGSMITH_PROJECT'] = "RAG-AskMyVideo"
 from dotenv import load_dotenv
 
 class ProcessTranscript:
+    @traceable(name="process_transcript",tags=["audio-to-text","RAG","chunking"])
     def process_transcript(url:str,query:str):
         # main entry point
         load_dotenv()

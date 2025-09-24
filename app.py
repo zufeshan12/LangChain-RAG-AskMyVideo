@@ -2,7 +2,6 @@ import streamlit as st
 import time
 from process_transcript import ProcessTranscript
 
-
 # Custom CSS for background
 def add_title_and_bg(image_file):
     with open(image_file, "rb") as f:
